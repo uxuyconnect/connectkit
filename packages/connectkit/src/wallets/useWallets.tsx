@@ -50,7 +50,8 @@ export const useWallets = (): WalletProps[] => {
         (connector.type === 'injected' && connector.id !== 'metaMask') ||
         isCoinbaseWalletConnector(connector.id), // always run coinbase wallet SDK
     };
-
+    console.log('XXXX@@@@@');
+    console.log(walletId);
     if (walletId) {
       const wallet = walletConfigs[walletId];
       return {
@@ -96,6 +97,7 @@ export const useWallets = (): WalletProps[] => {
             self.find((w) => w.id === 'com.coinbase.wallet')
           )
       )
+      .filter((wallet, index, self) => !(wallet.id === 'uxuyWalletSDK'))
       // remove wallet with id io.metamask if wallet with id 'metaMask' exists
       .filter(
         (wallet, index, self) =>

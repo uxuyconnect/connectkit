@@ -3,9 +3,12 @@ import {
   injected,
   walletConnect,
   coinbaseWallet,
+  uxuyWallet,
   CoinbaseWalletParameters,
   safe,
 } from '@wagmi/connectors';
+
+export type UxuyWalletParameters = {};
 
 type DefaultConnectorsProps = {
   app: {
@@ -15,6 +18,7 @@ type DefaultConnectorsProps = {
     url?: string;
   };
   walletConnectProjectId?: string;
+  uxuyWalletParameters?: UxuyWalletParameters;
   coinbaseWalletPreference?: CoinbaseWalletParameters<'4'>['preference'];
 };
 
@@ -22,6 +26,7 @@ const defaultConnectors = ({
   app,
   walletConnectProjectId,
   coinbaseWalletPreference,
+  uxuyWalletParameters,
 }: DefaultConnectorsProps): CreateConnectorFn[] => {
   const hasAllAppData = app.name && app.icon && app.description && app.url;
   const shouldUseSafeConnector =
@@ -29,6 +34,7 @@ const defaultConnectors = ({
 
   const connectors: CreateConnectorFn[] = [];
 
+  console.log("defaultConnectors")
   // If we're in an iframe, include the SafeConnector
   if (shouldUseSafeConnector) {
     connectors.push(
@@ -37,16 +43,18 @@ const defaultConnectors = ({
       })
     );
   }
-
+  console.log("SSSS")
+  console.log(connectors)
   // Add the rest of the connectors
   connectors.push(
-    injected({ target: 'metaMask' }),
-    coinbaseWallet({
+    /*injected({ target: 'metaMask' }),*/
+    /*coinbaseWallet({
       appName: app.name,
       appLogoUrl: app.icon,
       overrideIsMetaMask: false,
       preference: coinbaseWalletPreference,
-    })
+    })*/
+      uxuyWallet(uxuyWalletParameters)
   );
 
   if (walletConnectProjectId) {

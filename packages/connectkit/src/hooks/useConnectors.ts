@@ -51,6 +51,16 @@ export function useCoinbaseWalletConnector() {
   */
   return useConnector('coinbaseWalletSDK');
 }
+
+export function useUxuyWalletConnector() {
+  /*
+  options: {
+    headlessMode: true,
+  }
+  */
+  return useConnector('uxuyWalletSDK');
+}
+
 export function useMetaMaskConnector() {
   /*
   options: {

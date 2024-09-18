@@ -65,6 +65,24 @@ export const walletConfigs: {
         : `https://argent.link/app/wc?uri=${encodeURIComponent(uri)}`;
     },
   },
+  'uxuyWallet, uxuyWalletSDK': {
+    name: 'Uxuy Wallet',
+    shortName: 'Uxuy',
+    icon: <Logos.Uxuy background />,
+    iconShape: 'squircle',
+    downloadUrls: {
+      download: 'https://connect.family.co/v0/download/coinbasewallet',
+      website: 'https://www.coinbase.com/wallet/getting-started-extension',
+      android: 'https://play.google.com/store/apps/details?id=org.toshi',
+      ios: 'https://apps.apple.com/app/coinbase-wallet-store-crypto/id1278383455',
+      chrome:
+        'https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad',
+    },
+    getWalletConnectDeeplink: (uri: string) => {
+      return `https://go.cb-w.com/wc?uri=${encodeURIComponent(uri)}`;
+    },
+  },
+
   'coinbaseWallet, coinbaseWalletSDK': {
     name: 'Coinbase Wallet',
     shortName: 'Coinbase',
