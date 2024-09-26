@@ -1,6 +1,6 @@
 {
   "name": "nextjs-siwe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "connectkit": "workspace:packages/connectkit",
-    "connectkit-next-siwe": "workspace:packages/connectkit-next-siwe",
+    "@uxuyalpha/connectkit": "workspace:*",
+    "@uxuyalpha/connectkit-next-siwe": "workspace:*",
     "next": "12.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

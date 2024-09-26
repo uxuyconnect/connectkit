@@ -67,7 +67,7 @@ export const walletConfigs: {
   },
   'uxuyWallet, uxuyWalletSDK': {
     name: 'UXUY Wallet',
-    shortName: 'Uxuy',
+    shortName: 'UXUY Wallet',
     icon: <Logos.Uxuy background />,
     iconShape: 'squircle',
     downloadUrls: {

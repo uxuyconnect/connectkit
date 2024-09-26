@@ -1,5 +1,17 @@
 # connectkit
 
+## 3.2.1
+
+### Patch Changes
+
+- sync
+
+## 3.2.0
+
+### Minor Changes
+
+- fix bug
+
 ## 3.1.0
 
 ### Minor Changes

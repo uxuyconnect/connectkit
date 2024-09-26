@@ -1,14 +1,14 @@
 {
   "name": "cra",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@uxuyalpha/connectkit": "workspace:*",
     "@tanstack/react-query": "^5.17.15",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "connectkit": "workspace:packages/connectkit",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
